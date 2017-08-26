@@ -1,2 +1,5 @@
-# AGPS_update_batch_file
-Windows batch file to update the Sony AGPS File on cameras
+# Sony GPS Assist Data windows batch file updater
+Copy the gps_update.bat in the root directory from your SD-card, and run it.
+It will create the sub directory if needed and download all needed files and then checks the download for corruption.
+
+This should run on all versions of windows, as it uses build in methods, no additional installations needed!
