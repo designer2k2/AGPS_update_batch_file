@@ -25,6 +25,7 @@ set /p MD5fromHost=<%cd%\PRIVATE\SONY\GPS\assistme.md5
 cls
 if "%MD5fromLocal:~0,32%" == "%MD5fromHost:~0,32%" (
 	del download.md5
+	del PRIVATE\SONY\GPS\assistme.md5
 	echo Download is ok!
 	TITLE = Sony AGPS updater finished successfully
 ) else (
