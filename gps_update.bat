@@ -15,8 +15,8 @@ TITLE = Sony AGPS updater
 if not exist "%~dp0\PRIVATE\SONY\GPS" mkdir %~dp0\PRIVATE\SONY\GPS
 
 ::Download both files:
-bitsadmin.exe /transfer "Sony AGPS assistme.dat Update" http://control.d-imaging.sony.co.jp/GPS/assistme.dat "%cd%\PRIVATE\SONY\GPS\assistme.dat"
-bitsadmin.exe /transfer "Sony AGPS assistme.md5 Update" http://control.d-imaging.sony.co.jp/GPS/assistme.md5 "%cd%\PRIVATE\SONY\GPS\assistme.md5"
+bitsadmin.exe /transfer "Sony AGPS assistme.dat Update" /priority high http://control.d-imaging.sony.co.jp/GPS/assistme.dat "%cd%\PRIVATE\SONY\GPS\assistme.dat"
+bitsadmin.exe /transfer "Sony AGPS assistme.md5 Update" /priority high http://control.d-imaging.sony.co.jp/GPS/assistme.md5 "%cd%\PRIVATE\SONY\GPS\assistme.md5"
 
 ::MD5 check:
 certUtil -hashfile %~dp0\PRIVATE\SONY\GPS\assistme.dat MD5 | find /i /v "md5" | find /i /v "certutil" > download.md5
